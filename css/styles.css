@@ -97,16 +97,19 @@ body {
   color: var(--accent-color);
 }
 
-.header-nav-list-item::after {
+.header-nav-current::after {
+  position: absolute;
   display: inline-block;
   content: "";
-    width: 100%;
+  width: 100%;
   height: 4px;
+  top: 44px;
   background-color: var(--accent-color);
   border-radius: 2px;
 }
 
-.header-nav-accent {
+.header-nav-current {
+  position: relative;
   color: var(--accent-color);
 }
 
@@ -140,7 +143,7 @@ body {
   fill: var(--main-text-color);
 }
 
-
+ 
 
 .header-contact-icon {
   margin-right: 10px;
