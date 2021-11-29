@@ -21,10 +21,11 @@ ul {
 }
 
 body {
-  color: var(--main-text-color);
-  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
+
+  color: var(--main-text-color);
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
@@ -56,6 +57,7 @@ body {
 
 .header-logo {
   margin-right: 93px;
+
   font-family: Raleway;
   font-style: normal;
   font-weight: 700;
@@ -79,6 +81,8 @@ body {
 }
 
 .header-nav-list-item {
+  margin-right: 50px;
+
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -86,7 +90,6 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #212121;
-  margin-right: 50px;
 }
 
 .header-nav-list-item:last-child {
@@ -99,21 +102,28 @@ body {
 
 .header-nav-current::after {
   position: absolute;
+
   display: inline-block;
   content: "";
   width: 100%;
   height: 4px;
   top: 44px;
+
   background-color: var(--accent-color);
   border-radius: 2px;
 }
 
 .header-nav-current {
   position: relative;
+
   color: var(--accent-color);
 }
 
 .header-contact {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -140,10 +150,15 @@ body {
 .header-link {
   display: flex;
   align-items: center;
+
   fill: var(--main-text-color);
 }
 
 .header-contact-icon {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   margin-right: 10px;
 }
 
@@ -157,6 +172,7 @@ body {
   height: 600px;
   max-width: 1600px;
   margin: auto;
+
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.2),
@@ -186,7 +202,6 @@ body {
   margin: 30px auto 0;
   padding: 10px 32px;
   min-width: 200px;
-  border-radius: 4px;
 
   font-family: inherit;
   font-weight: 700;
@@ -198,11 +213,13 @@ body {
   background: #2196f3;
   color: var(--second-text-color);
   cursor: pointer;
+  border-radius: 4px;
 }
 
 /* VALUES */
 .visually-hidden {
   position: absolute;
+
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -236,13 +253,15 @@ body {
   align-items: center;
   width: 270px;
   height: 120px;
+  margin-bottom: 30px;
+
   background-color: #f5f4fa;
   border-radius: 4px;
-  margin-bottom: 30px;
 }
 
 .values-item-tittle {
   margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -290,13 +309,17 @@ body {
 
 .about-tittle-container {
   position: absolute;
-  background-color: rgba(47, 48, 58, 0.8);
+
   width: 370px;
   height: 70px;
   bottom: 0;
+
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 .about-item-tittle {
+  margin: 27px auto;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -304,7 +327,6 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
-  margin: 27px auto;
 }
 
 /* TEAM */
@@ -343,6 +365,7 @@ body {
 
 .team-item-tittle {
   margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -361,12 +384,13 @@ body {
 }
 
 .team-item-text {
+  margin-bottom: 16px;
+
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
-  margin-bottom: 16px;
 }
 
 .team-social-list {
@@ -389,7 +413,11 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
+
   border-radius: 50%;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-link:hover,
@@ -440,9 +468,13 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
+
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: #afb1b8;
+  transition-property: fill, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
@@ -459,6 +491,7 @@ body {
 
 .portfolio-btn {
   padding: 6px 22px;
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -469,6 +502,9 @@ body {
   cursor: pointer;
   border: transparent;
   border-radius: 4px;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn:hover,
@@ -497,8 +533,16 @@ body {
 }
 
 .portfolio-link {
-  position: relative;
   display: block;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-thumb {
+  position: relative;
+
   overflow: hidden;
 }
 
@@ -514,28 +558,29 @@ body {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-link::after {
+.portfolio-overlay {
   position: absolute;
-  content: "Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.";
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translateY(-110px);
-  opacity: 0;
 
-  display: block;
   width: 370px;
   height: 294px;
+  top: 0;
+  left: 0;
 
+  background-color: rgba(33, 150, 243, 0.9);
   font-size: 18px;
-  line-height: 28px;
+  line-height: 1.56;
   letter-spacing: 0.03em;
   color: #ffffff;
-  background-color: rgba(33, 150, 243, 0.9);
   padding: 63px 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
+  opacity: 0;
 }
 
-.portfolio-link:hover::after {
-  transform: translateY(calc(-100% - 110px));
+.portfolio-link:hover .portfolio-overlay {
+  transform: translateY(0);
   opacity: 1;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-img {
@@ -544,6 +589,7 @@ body {
 
 .portfolio-tittle-items {
   margin-bottom: 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -560,6 +606,7 @@ body {
 
 .portfolio-card-text {
   padding: 20px 24px;
+
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
@@ -569,6 +616,7 @@ body {
 .footer {
   padding: 60px 0;
   height: 252px;
+
   background-color: #2f303a;
 }
 
@@ -628,6 +676,7 @@ body {
 
 .footer-tittle-social {
   margin-bottom: 20px;
+
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
@@ -656,17 +705,83 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
+
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--accent-color);
-  fill: #ffffff;
 }
 
 .footer-social-icon {
   fill: currentColor;
+}
+
+/* -------Backdrop Modal ------- */
+
+.backdrop {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms, visibility 250ms;
+}
+
+.modal {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+  width: 528px;
+  min-height: 581px;
+
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, -50%);
+}
+
+.backdrop.is-hidden .modal {
+  transform: scale(-0.5);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn {
+  position: absolute;
+
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal-btn:hover .modal-icon {
+  fill: var(--accent-color);
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
